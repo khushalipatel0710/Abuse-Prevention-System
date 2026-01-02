@@ -1,0 +1,25 @@
+{
+  "development": {
+    "mongodb": {
+      "host": "localhost",
+      "port": 27017,
+      "database": "rate_limiting_db",
+      "uri": "mongodb://localhost:27017/rate_limiting_db"
+    },
+    "redis": {
+      "host": "localhost",
+      "port": 6379,
+      "db": 0
+    }
+  },
+  "production": {
+    "mongodb": {
+      "uri": "${MONGODB_URI}"
+    },
+    "redis": {
+      "host": "${REDIS_HOST}",
+      "port": "${REDIS_PORT}",
+      "password": "${REDIS_PASSWORD}"
+    }
+  }
+}
